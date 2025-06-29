@@ -2,15 +2,15 @@ FROM node:20
 
 WORKDIR /app
 
-COPY package*.json ./
+# copy the correct package.json from the Task subdirectory
+COPY Task/package*.json ./Task/
 
-# ensure devDependencies are installed
-ENV NODE_ENV=development
+# install
+WORKDIR /app/Task
+RUN npm install
 
-# install Vite globally so the shell can find it
-RUN npm install -g vite && npm install
-
-COPY . .
+# copy the actual code
+COPY Task ./Task
 
 EXPOSE 5173
 

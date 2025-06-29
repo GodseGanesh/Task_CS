@@ -34,7 +34,8 @@ services:
     environment:
       - VITE_API_BASE_URL=http://web:8000
     volumes:
-      - ./Task_CS_UI:/app
+      - ./Task_CS_UI/Task:/app
+      - /app/node_modules
     command: npm run dev -- --host
 
 

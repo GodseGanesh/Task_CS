@@ -1,0 +1,64 @@
+# Top-level
+*.env
+.env
+.env.*
+
+# === Django (Task_Backend folder) ===
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+*.log
+
+# Django
+Task_Backend/db.sqlite3
+Task_Backend/media/
+Task_Backend/staticfiles/
+Task_Backend/static/
+Task_Backend/.env
+
+# Virtual environment
+venv/
+env/
+ENV/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# === React (Task_CS_UI folder) ===
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React build
+Task_CS_UI/build/
+Task_CS_UI/.env
+
+# .DS_Store for macOS
+.DS_Store
+
+# === Others ===
+# System
+Thumbs.db
+
+# coverage
+.coverage
+htmlcov/
+
+# Pytest
+.pytest_cache/
+
+# Editor backups
+*.bak
+*~
